@@ -15,10 +15,9 @@ Based on [AdmobFree](https://ionicframework.com/docs/native/admob-free/). Cordov
 
 ## Installation
 
-- Install via npm  
-`npm i @webfactor/ionic-admob-service`
-
-- Add `AdmobServiceModule.forRoot()` to your ionic module imports
+- Install `@webfactor/ionic-admob-service` via npm.
+- Install `lycwed-cordova-plugin-admob-free` via cordova / ionic (see notes above).
+- Add `AdmobServiceModule.forRoot()` to your ionic module imports.
 
 ## Methods
 
