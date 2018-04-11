@@ -1,5 +1,7 @@
 # AdmobService
 
+HIER STEHT NOCH WAS!!!
+
 Simplifies the display of Admob banner & interstitial. 💰  
 Based on [AdmobFree](https://ionicframework.com/docs/native/admob-free/). Cordova and Ionic Native plugins must be installed.
 
