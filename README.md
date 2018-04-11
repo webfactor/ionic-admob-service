@@ -1,28 +1,85 @@
 # AdmobService
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+Simplifies the display of Admob banner & interstitial. 💰  
+Based on [AdmobFree](https://ionicframework.com/docs/native/admob-free/). Cordova and Ionic Native plugins must be installed.
 
-## Development server
+❗️ For the time being use our own [webfactor fork](https://github.com/webfactor/lycwed-cordova-plugin-admob-free.git) of admob-free plugin to be able to specify the google sdk version:
+```json
+// package.json
+"lycwed-cordova-plugin-admob-free": "https://github.com/webfactor/lycwed-cordova-plugin-admob-free.git"
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+"lycwed-cordova-plugin-admob-free": {
+    "GOOGLE_API_VERSION": "11.2.0"
+}
+```
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Install via npm  
+`npm i @webfactor/ionic-admob-service`
 
-## Build
+- Add `AdmobServiceModule.forRoot()` to your ionic module imports
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Methods
 
-## Running unit tests
+```typescript
+setBannerIds(ids: { android: string; ios: string }): void
+```
+Sets banner ids for both platforms. If not set, Admob test ids are used.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+setInterstitialIds(ids: { android: string; ios: string }): void
+```
+Sets interstitial ids for both platforms. If not set, Admob test ids are used.
 
-## Running end-to-end tests
+```typescript
+prepareBanner(
+    autoShow: boolean = false,
+    bannerAtTop: boolean = false,
+    isTesting: boolean = false
+): Promise<any>
+```
+Prepares a banner to be shown. Params should be self-explanatory.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+```typescript
+showBanner(): Promise<any> 
+```
+Manually show banner after successful preparation.
 
-## Further help
+```typescript
+hideBanner(): Promise<any>
+```
+Manually hide banner if present.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```typescript
+removeBanner(): Promise<any>
+```
+Manually remove banner completely.
+
+```typescript
+prepareInterstitial(autoShow: boolean = false, isTesting: boolean = false): Promise<any>
+```
+Prepares an interstitial to be shown. Params should be self-explanatory.  
+❗️Fullfilled promise doesn't mean it's ready to show.
+
+```typescript
+showInterstitial(): Promise<any>
+```
+Manually show prepared interstitial.
+
+
+## Example
+```typescript
+constructor(
+    private platform: Platform,
+    private admobService: AdmobService
+) {
+    this.platform.ready().then(() => {
+        this.admobService.setBannerIds({
+            ios: 'insert_id_here',
+            android: 'and_here'
+        });
+        this.admobService.prepareBanner(true);
+    });
+}
+``` 
