@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('admob-service App', () => {
+describe('ionic-admob-service App', () => {
   let page: AppPage;
 
   beforeEach(() => {

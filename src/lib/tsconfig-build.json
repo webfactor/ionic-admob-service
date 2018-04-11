@@ -10,7 +10,7 @@
     "newLine": "lf",
     "module": "es2015",
     "moduleResolution": "node",
-    "outDir": "../dist/packages/admob-service",
+    "outDir": "../dist/packages/ionic-admob-service",
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
@@ -20,7 +20,7 @@
     "types": [],
     "baseUrl": ".",
     "paths": {
-      "admob-service": ["../dist/packages/admob-service"]
+      "ionic-admob-service": ["../dist/packages/ionic-admob-service"]
     },
     "typeRoots": [
       "./node_modules/@types/"
@@ -33,7 +33,7 @@
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "admob-service",
+    "flatModuleId": "ionic-admob-service",
     "skipTemplateCodegen": true
   }
 }

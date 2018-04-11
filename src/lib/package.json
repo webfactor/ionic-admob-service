@@ -1,5 +1,5 @@
 {
-  "name": "@webfactor/admob-service",
+  "name": "@webfactor/ionic-admob-service",
   "version": "0.1.0",
   "repository": {
     "type": "git",
@@ -9,10 +9,10 @@
     "angular"
   ],
   "license": "MIT",
-  "main": "./bundles/admob-service.umd.js",
-  "es2015": "./esm2015/admob-service.js",
-  "module": "./esm5/admob-service.es5.js",
-  "typings": "./admob-service.d.ts",
+  "main": "./bundles/ionic-admob-service.umd.js",
+  "es2015": "./esm2015/ionic-admob-service.js",
+  "module": "./esm5/ionic-admob-service.es5.js",
+  "typings": "./ionic-admob-service.d.ts",
   "peerDependencies": {
     "ionic-angular": "^3.9.2",
     "@ionic-native/admob-free": "^4.6.0",
