@@ -1,22 +1,21 @@
 {
-  "name": "@webfactor/ionic-admob-service",
-  "version": "3.0.0",
-  "repository": {
-    "type": "git",
-    "url": "url"
-  },
-  "keywords": [
-    "angular"
-  ],
-  "license": "MIT",
-  "main": "./bundles/ionic-admob-service.umd.js",
-  "es2015": "./esm2015/ionic-admob-service.js",
-  "module": "./esm5/ionic-admob-service.es5.js",
-  "typings": "./ionic-admob-service.d.ts",
-  "peerDependencies": {
-    "ionic-angular": "^3.9.2",
-    "@ionic-native/admob-free": "^4.6.0",
-    "@ionic-native/core": "^4.6.0",
-    "lycwed-cordova-plugin-admob-free": "https://github.com/webfactor/lycwed-cordova-plugin-admob-free.git"
-  }
+    "name": "@webfactor/ionic-admob-service",
+    "version": "3.0.1",
+    "repository": {
+        "type": "git",
+        "url": "url"
+    },
+    "keywords": ["angular"],
+    "license": "MIT",
+    "main": "./bundles/ionic-admob-service.umd.js",
+    "es2015": "./esm2015/ionic-admob-service.js",
+    "module": "./esm5/ionic-admob-service.es5.js",
+    "typings": "./ionic-admob-service.d.ts",
+    "peerDependencies": {
+        "ionic-angular": "^3.9.2",
+        "@ionic-native/admob-free": "^4.6.0",
+        "@ionic-native/core": "^4.6.0",
+        "lycwed-cordova-plugin-admob-free":
+            "https://github.com/webfactor/lycwed-cordova-plugin-admob-free.git"
+    }
 }
